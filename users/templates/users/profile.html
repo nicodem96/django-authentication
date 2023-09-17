@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Profilo
+{% endblock title %}
+
+{% block content %}
+<img src="{{ user.image.url }}" alt="img">
+<h2>Profilo di {{user}} </h2>
+<p>Desideri aggiungere una recensione al film che più ti piace?</p>
+<a href = "{% url 'review' %}">Aggiungi una recensione</a>
+{% if user.image %}
+    <p> Desideri aggiornare la tua foto? </p>
+    <a href = "{% url 'photo' %}"> Clicca qui</a>
+{% else %}
+    <p>Aggiungi una foto al tuo profilo!</p>
+    <a href = "{% url 'photo' %}"> Clicca qui</a>
+{% endif %}
+{% endblock content %}
