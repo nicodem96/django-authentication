@@ -13,6 +13,20 @@ Profilo
 <p>Desideri aggiungere una recensione al film che più ti piace?</p>
 <a href = "{% url 'review' %}">Aggiungi una recensione</a>
 
-<p>Desideri aggiornare il tuo profilo?</p>
-<a href = "{% url 'update-profile' %}"> Clicca qui</a>
+<p>Desideri aggiornare il tuo profilo?
+<a href = "{% url 'update-profile' %}">Clicca qui</a>
+</p>
+
+{% if user.image %}
+<p>Desideri aggiornare la tua foto?
+    <a href = "{% url 'photo' %}">Clicca qui</a>
+</p>
+
+{% else %}
+<p>
+   Desideri aggiungere una foto al tuo profilo?
+   <a href = "{% url 'photo' %}">Clicca qui</a>
+</p>
+
+{% endif %}
 {% endblock content %}

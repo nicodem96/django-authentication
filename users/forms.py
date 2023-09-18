@@ -14,5 +14,21 @@ class CustomUserChangeForm(UserChangeForm):
         fields = (
             "email",
             "username",
-            "image"
+        )
+
+class ImageChangeForm(UserChangeForm):
+    password = None
+    class Meta:
+        model = get_user_model()
+        fields = (
+            ["image",]
+        )
+
+class ModifyProfileForm(UserChangeForm):
+    password = None
+    class Meta:
+        model = get_user_model()
+        fields = (
+            "email",
+            "username",
         )
