@@ -6,7 +6,7 @@
     <p>Accedi per visualizzare il tuo profilo</p>
 {% endif %}
 
-<form method="POST" action="{% url 'login' %}">
+<form method="POST" action="{% url 'account_login' %}">
 {% csrf_token %}
 <table>
 <tr>

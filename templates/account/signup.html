@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block title %}
-Login
+Registrati
 {% endblock title %}
 
 {% block content %}
@@ -13,7 +13,7 @@ Login
   </div>
   <div class = "border-top pt-3">
     <small class = "text-muted">
-      Hai già un account? <a class="ml-2" href = "{% url 'login' %}">Log In</a>
+      Hai già un account? <a class="ml-2" href = "{% url 'account_login' %}">Log In</a>
     </small>
   </div>
 </form>
