@@ -14,15 +14,5 @@ class CustomUserChangeForm(UserChangeForm):
         fields = (
             "email",
             "username",
+            "image"
         )
-
-class ImageChangeForm(UserChangeForm):
-    class Meta:
-        model = get_user_model()
-        fields = (
-            "image",
-        )
-        exclude = ["password"]
-        labels = {
-            "image" : "Scegli un'immagine dal tuo PC",
-            }
