@@ -153,6 +153,11 @@ AUTHENTICATION_BACKENDS = (
 "allauth.account.auth_backends.AuthenticationBackend", # new
 )
 
+ACCOUNT_USERNAME_REQUIRED = False # new
+ACCOUNT_AUTHENTICATION_METHOD = "email" # new
+ACCOUNT_EMAIL_REQUIRED = True # new
+ACCOUNT_UNIQUE_EMAIL = True # new
+
 LOGIN_REDIRECT_URL = "home" # new -- Nota: sono già home di default su django.allauth ma lascio l'impostazione per 
 LOGOUT_REDIRECT_URL = "home" # new -- ricordarci che possono essere cambiate in futuro
 
