@@ -5,7 +5,10 @@ Profilo
 {% endblock title %}
 
 {% block content %}
+
+{% if user.image %}
 <img src="{{ user.image.url }}" alt="img">
+{% endif %}
 <h2>Profilo di {{user}} </h2>
 <p>Desideri aggiungere una recensione al film che più ti piace?</p>
 <a href = "{% url 'review' %}">Aggiungi una recensione</a>
