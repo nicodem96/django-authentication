@@ -147,7 +147,11 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+ACCOUNT_REDIRECT_URL = "home" # new -- Nota: sono già home di default su django.allauth ma lascio l'impostazione per 
+LOGIN_REDIRECT_URL = "home" # new -- ricordarci che possono essere cambiate in futuro
+
 SITE_ID = 1
+
 AUTHENTICATION_BACKENDS = (
 "django.contrib.auth.backends.ModelBackend",
 "allauth.account.auth_backends.AuthenticationBackend", # new
@@ -158,7 +162,6 @@ ACCOUNT_AUTHENTICATION_METHOD = "email" # new
 ACCOUNT_EMAIL_REQUIRED = True # new
 ACCOUNT_UNIQUE_EMAIL = True # new
 
-LOGIN_REDIRECT_URL = "home" # new -- Nota: sono già home di default su django.allauth ma lascio l'impostazione per 
-LOGOUT_REDIRECT_URL = "home" # new -- ricordarci che possono essere cambiate in futuro
+
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
